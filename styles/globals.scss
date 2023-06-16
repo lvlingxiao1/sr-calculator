@@ -1,0 +1,30 @@
+$bg_colour: #313131;
+$text_colour: #cccccc;
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+		Helvetica Neue, sans-serif;
+	background-color: $bg_colour;
+	color: $text_colour;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+input[type='number'],
+input[type='text'] {
+	background-color: $bg_colour;
+	color: $text_colour;
+	border: 1px solid #cccccc;
+	border-radius: 0.5em;
+	padding: 0.3em;
+}
+
+* {
+	box-sizing: border-box;
+}

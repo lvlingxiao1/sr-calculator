@@ -1,0 +1,43 @@
+.app {
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.navbar {
+	position: sticky;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 10em;
+	padding: 2em 1em;
+	background-color: #171a1e;
+
+	.nav-item {
+		color: white;
+		transition: border 0.3s;
+		border-radius: 0.3em;
+		border: 1px solid transparent;
+		&:hover {
+			border: 1px solid white;
+		}
+		margin: 1em 0;
+		padding: 1em;
+	}
+}
+
+.main {
+	flex: 1;
+	padding: 3em 3em;
+	div {
+		margin: 0.5em 0;
+	}
+
+	input[type='number'] {
+		margin-left: 1em;
+		width: 5em;
+	}
+}
