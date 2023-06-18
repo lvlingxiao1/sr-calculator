@@ -53,7 +53,7 @@ export default function 充能页面() {
 				</div>
 				<div>
 					战技回能
-					<input type="number" onChange={(e) => 设置普通攻击回能(+e.target.value)} value={战技回能}></input>
+					<input type="number" onChange={(e) => 设置战技回能(+e.target.value)} value={战技回能}></input>
 				</div>
 				<div>
 					每回合额外回能
