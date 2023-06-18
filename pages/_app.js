@@ -14,18 +14,18 @@ function 导航布局({ children }) {
 			</Head>
 			<div className={styles.app}>
 				<div className={styles.navbar}>
-					<div className={styles['nav-item']}>
-						<Link href="/shang-hai">伤害</Link>
-					</div>
-					<div className={styles['nav-item']}>
-						<Link href="/xiao-guo-ming-zhong">效果命中</Link>
-					</div>
-					<div className={styles['nav-item']}>
-						<Link href="/chong-neng">充能</Link>
-					</div>
-					<div className={styles['nav-item']}>
-						<Link href="/su-du">速度</Link>
-					</div>
+					<Link href="/shang-hai" className={styles['nav-item']}>
+						伤害
+					</Link>
+					<Link href="/xiao-guo-ming-zhong" className={styles['nav-item']}>
+						效果命中
+					</Link>
+					<Link href="/chong-neng" className={styles['nav-item']}>
+						充能
+					</Link>
+					<Link href="/su-du" className={styles['nav-item']}>
+						速度
+					</Link>
 				</div>
 				<div className={styles.main}>{children}</div>
 			</div>
