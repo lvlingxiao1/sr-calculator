@@ -41,6 +41,7 @@ export default function 充能页面() {
 	const [战技回能, 设置战技回能] = useState(30);
 	const [每回合额外回能, 设置每回合额外回能] = useState(0);
 	const [能量需求, 设置能量需求] = useState(120);
+	const [充能效率, 设置充能效率] = useState(150);
 	return (
 		<>
 			<div>
@@ -85,7 +86,16 @@ export default function 充能页面() {
 					<p key={i}>{s}</p>
 				))}
 			</div>
-			<div></div>
+
+			<h3>
+				携带充能效率武器（自定义充能效率：
+				<input type="number" onChange={(e) => 设置充能效率(+e.target.value)} value={充能效率}></input>%）
+			</h3>
+			<div>
+				{测试回能(普通攻击回能, 战技回能, 每回合额外回能, 能量需求, 充能效率 / 100).map((s, i) => (
+					<p key={i}>{s}</p>
+				))}
+			</div>
 		</>
 	);
 }
