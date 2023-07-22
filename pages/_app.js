@@ -26,6 +26,9 @@ function 导航布局({ children }) {
 					<Link href="/su-du" className={styles['nav-item']}>
 						速度
 					</Link>
+					<Link href="/qing-que" className={styles['nav-item']}>
+						青雀抽牌
+					</Link>
 				</div>
 				<div className={styles.main}>{children}</div>
 			</div>
