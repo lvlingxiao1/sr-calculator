@@ -17,7 +17,10 @@ function 导航布局({ children }) {
 					<Link href="/shang-hai" className={styles['nav-item']}>
 						伤害
 					</Link>
-					<Link href="/xiao-guo-ming-zhong" className={styles['nav-item']}>
+					<Link
+						href="/xiao-guo-ming-zhong"
+						className={styles['nav-item']}
+					>
 						效果命中
 					</Link>
 					<Link href="/chong-neng" className={styles['nav-item']}>
