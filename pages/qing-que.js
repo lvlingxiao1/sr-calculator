@@ -1,27 +1,10 @@
 import React, { useState } from 'react';
-import {
-	Chart as ChartJS,
-	CategoryScale,
-	LinearScale,
-	BarElement,
-	Title,
-	Tooltip,
-	Legend,
-	ArcElement,
-} from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement } from 'chart.js';
 import { Bar, Pie } from 'react-chartjs-2';
 
 ChartJS.defaults.color = '#fff';
 
-ChartJS.register(
-	CategoryScale,
-	LinearScale,
-	BarElement,
-	Title,
-	Tooltip,
-	Legend,
-	ArcElement
-);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ArcElement);
 
 const options1 = {
 	responsive: true,
@@ -152,15 +135,9 @@ export default function 青雀抽牌页面() {
 
 		const 战技点标签 = ['恢复1', '0', '1', '2', '3', '4', '5'];
 		let 战技点数据 = [...无不求人统计];
-		有不求人统计
-			.slice(1, 6)
-			.forEach((value, index) => (战技点数据[index] += value));
+		有不求人统计.slice(1, 6).forEach((value, index) => (战技点数据[index] += value));
 
-		let 平均战技点消耗 =
-			战技点数据.reduce(
-				(pre, curr, index) => pre + curr * (index - 1),
-				0
-			) / 测试次数;
+		let 平均战技点消耗 = 战技点数据.reduce((pre, curr, index) => pre + curr * (index - 1), 0) / 测试次数;
 
 		设置图表(
 			<div style={{ width: '70rem' }}>
@@ -240,11 +217,7 @@ export default function 青雀抽牌页面() {
 			<div>
 				<div>
 					测试次数
-					<input
-						type="number"
-						onChange={(e) => 设置测试次数(+e.target.value)}
-						value={测试次数}
-					></input>{' '}
+					<input type="number" onChange={(e) => 设置测试次数(+e.target.value)} value={测试次数}></input>{' '}
 				</div>
 			</div>
 			<div>

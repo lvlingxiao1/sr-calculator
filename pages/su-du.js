@@ -40,17 +40,9 @@ const 计算目标速度 = (基础速度, 速度百分比, 行动缩短, 目标�
 	return Math.ceil(解);
 };
 
-const 简易计算目标速度 = (
-	基础速度,
-	速度百分比,
-	行动缩短,
-	目标轮数,
-	目标行动数
-) => {
+const 简易计算目标速度 = (基础速度, 速度百分比, 行动缩短, 目标轮数, 目标行动数) => {
 	const 行动条 = 基础行动条 * (1 - 行动缩短 / 100);
-	return Math.ceil(
-		(目标行动数 * 行动条) / (目标轮数 * 每轮时间 + 第一轮额外时间)
-	);
+	return Math.ceil((目标行动数 * 行动条) / (目标轮数 * 每轮时间 + 第一轮额外时间));
 };
 
 export default function 速度页面() {
@@ -63,33 +55,19 @@ export default function 速度页面() {
 			<div>
 				<div>
 					基础速度
-					<input
-						type="number"
-						onChange={(e) => 设置基础速度(+e.target.value)}
-						value={基础速度}
-					></input>
+					<input type="number" onChange={(e) => 设置基础速度(+e.target.value)} value={基础速度}></input>
 				</div>
 			</div>
 			<div>
 				<div>
 					速度百分比
-					<input
-						type="number"
-						onChange={(e) => 设置速度百分比(+e.target.value)}
-						value={速度百分比}
-					></input>{' '}
-					%
+					<input type="number" onChange={(e) => 设置速度百分比(+e.target.value)} value={速度百分比}></input> %
 				</div>
 			</div>
 			<div>
 				<div>
 					行动缩短
-					<input
-						type="number"
-						onChange={(e) => 设置行动缩短(+e.target.value)}
-						value={行动缩短}
-					></input>{' '}
-					%
+					<input type="number" onChange={(e) => 设置行动缩短(+e.target.value)} value={行动缩短}></input> %
 				</div>
 			</div>
 
@@ -115,13 +93,7 @@ export default function 速度页面() {
 				].map(([目标轮数, 目标行动数], i) => (
 					<div key={i}>
 						{目标轮数}轮{目标行动数}动：
-						{计算目标速度(
-							基础速度,
-							速度百分比,
-							行动缩短,
-							目标轮数,
-							目标行动数
-						)}
+						{计算目标速度(基础速度, 速度百分比, 行动缩短, 目标轮数, 目标行动数)}
 					</div>
 				))}
 			</div>
